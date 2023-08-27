@@ -18,15 +18,21 @@
     <meta name="twitter:image" content="/assets/img/preview.jpg">
 
     <style>
-      /* Light mode */
+      /* Default light mode */
+      :root {
+        --text-color: #222;
+        --bkg-color: #fff;
+        --anchor-color: #0033cc;
+      }
+
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         margin: 0 auto;
         max-width: 800px;
         padding: 20px;
-        color: #333;
-        background-color: #fff;
+        color: var(--text-color);
+        background-color: var(--bkg-color);
       }
 
       header, section {
@@ -34,25 +40,23 @@
       }
 
       h1, h2 {
-        color: #333;
+        color: var(--text-color);
+      }
+
+      a {
+        color: var(--anchor-color);
       }
 
       ul, ol {
         margin-left: 20px;
       }
+
       /* Dark mode */
       @media (prefers-color-scheme: dark) {
-        body {
-          color: #eee;
-          background-color: #121212;
-        }
-
-        h1, h2 {
-          color: #fff;
-        }
-
-        a {
-          color: #809fff;
+        :root {
+          --text-color: #eee;
+          --bkg-color: #121212;
+          --anchor-color: #809fff;
         }
       }
     </style>
