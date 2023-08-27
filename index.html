@@ -18,21 +18,42 @@
     <meta name="twitter:image" content="/assets/img/preview.jpg">
 
     <style>
+      /* Light mode */
       body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
         margin: 0 auto;
         max-width: 800px;
         padding: 20px;
+        color: #333;
+        background-color: #fff;
       }
+
       header, section {
         margin-bottom: 20px;
       }
+
       h1, h2 {
         color: #333;
       }
+
       ul, ol {
         margin-left: 20px;
+      }
+      /* Dark mode */
+      @media (prefers-color-scheme: dark) {
+        body {
+          color: #eee;
+          background-color: #121212;
+        }
+
+        h1, h2 {
+          color: #fff;
+        }
+
+        a {
+          color: #809fff;
+        }
       }
     </style>
     <!-- Google tag (gtag.js) -->
